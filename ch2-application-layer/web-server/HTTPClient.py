@@ -5,6 +5,7 @@ import sys
 # Get command line arguments
 if len(sys.argv) != 4:
     print('Usage: HTTPClient.py <server host> <server port> <filename>')
+    sys.exit()
 
 serverHost = sys.argv[1]
 serverPort = sys.argv[2]
