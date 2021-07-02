@@ -19,3 +19,5 @@ for i in range(1, 11):
         print(f'RTT: {responseTime - requestTime}')
     except timeout:
         print("Request timed out")
+
+clientSocket.close()
