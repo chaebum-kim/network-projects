@@ -95,7 +95,7 @@ if recv5[:3] != '250':
     sys.exit()
 
 # Send RCPT TO command and print server response
-rcptCommand = 'RCPT TO: <bob@naver.com>\r\n'
+rcptCommand = 'RCPT TO: <bob@gmail.com>\r\n'
 clientSocket.send(rcptCommand.encode())
 recv6 = clientSocket.recv(1024).decode()
 print(recv6)
