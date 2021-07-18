@@ -91,6 +91,14 @@ Referer: http://gaia.cs.umass.edu/ethereal-labs/lab3-1.htm </code></pre>
 |10|What is the throughput (bytes transferred per unit time) for the TCP connection? Explain how you calculated this value.|The TCP connection lasted about 5.42 seconds. The sender's relative sequence number is 164091 at the end of the connection. Since there was no retransmission, it means that the sender transmitted 164090 bytes. Therefore, the throughput is 164090/5.42 = 30,274bps. (Ignore the data transmitted by the receiver since it is very small amount of data.)|
 
 
+## TCP congestion control in action
+![screenshot4](https://github.com/chaebum-kim/network-projects/blob/master/wireshark-lab/TCP/screenshot4.JPG)
+![screenshot5](https://github.com/chaebum-kim/network-projects/blob/master/wireshark-lab/TCP/screenshot5.JPG)
+
+|No.|Question|Answer|
+|---|---|---|
+|1|Can you identify where TCP's slowstart phase begins and ends, and where congestion avoidance takes over?|TCP connection is in TCP slowstart phase when it first starts and ends after about 0.3 second later. The TCP slowstart phase is marked with red rectangle in above screenshot. After the slowstart phase, it seems that TCP connection runs in congestion avoid mode.|
+|2|Comment on ways in which the measured data differes from the idealized behavior of TCP that we've studied in the text.|In slowstart phase, a number of segments that a sender transmits should be doubled, but it doesn't seem to. Also, in congestion avoidance mode a number of segments sent should grow by 1 MMS at each round unless segment lost is detected. But the TCP sender constantly transmits 6 segments according to the screenshot.|
 
 
     
