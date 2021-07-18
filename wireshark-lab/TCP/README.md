@@ -98,7 +98,7 @@ Referer: http://gaia.cs.umass.edu/ethereal-labs/lab3-1.htm </code></pre>
 |No.|Question|Answer|
 |---|---|---|
 |1|Can you identify where TCP's slowstart phase begins and ends, and where congestion avoidance takes over?|TCP connection is in TCP slowstart phase when it first starts and ends after about 0.3 second later. The TCP slowstart phase is marked with red rectangle in above screenshot. After the slowstart phase, it seems that TCP connection runs in congestion avoid mode.|
-|2|Comment on ways in which the measured data differes from the idealized behavior of TCP that we've studied in the text.|In slowstart phase, a number of segments that a sender transmits should be doubled, but it doesn't seem to. Also, in congestion avoidance mode a number of segments sent should grow by 1 MMS at each round unless segment lost is detected. But the TCP sender constantly transmits 6 segments according to the screenshot.|
+|2|Comment on ways in which the measured data differes from the idealized behavior of TCP that we've studied in the text.|In slowstart phase, congestion window(cwnd) should be doubled, but it doesn't seem to. Also, in congestion avoidance mode cwnd should grow by 1 MMS at each round unless segment lost is detected. But the TCP sender constantly transmits 6 segments according to the screenshot.|
 
 
     
